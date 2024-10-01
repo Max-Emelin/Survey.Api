@@ -49,7 +49,7 @@ namespace Survey.Api.Controllers
             var nextQuestionId = _surveyService.SaveAnswer(request);
             if (nextQuestionId == null)
             {
-                return Ok(new { Message = "Survey completed" });
+                return Ok(new { Message = "Анкета пройдена" });
             }
 
             return Ok(new { NextQuestionId = nextQuestionId });
